@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>EngStep</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>จานเด็ด 4 ภาค: รสชาติไทยแท้</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font: Kanit (Modern Thai Font) -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+        body {
+            font-family: 'Kanit', 'Inter', sans-serif; /* Changed Font to Kanit */
+            background-color: #FFFFFF; /* Changed to White Background */
+            color: #333333; /* Dark Gray Text for contrast on white */
+        }
+        .header-bg {
+            background-color: #F3F4F6; /* Light gray for header */
+            border-bottom: 1px solid #E5E7EB;
+        }
+        /* Vibrant Amber for the accent line (Kept the same) */
+        .section-header {
+            border-left: 8px solid #F59E0B; /* Amber/Gold Accent */
+            padding-left: 1rem;
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+        }
+        .food-card {
+            background-color: #FFFFFF; /* White card background */
+            border: 1px solid #E5E7EB; /* Subtle light border */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .food-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Darker shadow for lift effect */
+        }
+        /* Custom scrollbar for better visual */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #F59E0B;
+            border-radius: 4px;
+        }
+        .modal-content {
+            max-height: 80vh; /* Limit modal height */
+            background-color: #F9FAFB; /* Very light modal background */
+        }
+    </style>
+</head>
+<body class="scroll-smooth">
+
+    <!-- Header & Navigation -->
+    <header class="header-bg sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="text-2xl font-bold text-amber-600 tracking-wider">
+                    จานเด็ด 4 ภาค 🇹🇭
+                </a>
+                <nav class="hidden md:flex space-x-8">
+                    <!-- Text color changed from light to dark gray -->
+                    <a href="#north" class="text-gray-700 hover:text-amber-600 transition duration-300 font-medium">ภาคเหนือ</a>
+                    <a href="#central" class="text-gray-700 hover:text-amber-600 transition duration-300 font-medium">ภาคกลาง</a>
+                    <a href="#northeast" class="text-gray-700 hover:text-amber-600 transition duration-300 font-medium">ภาคอีสาน</a>
+                    <a href="#south" class="text-gray-700 hover:text-amber-600 transition duration-300 font-medium">ภาคใต้</a>
+                </nav>
+                <!-- Simple mobile menu placeholder -->
+                <button class="md:hidden text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="text-white py-20 md:py-32 bg-cover bg-center" 
+        style="
+            /* URL ภาพพื้นหลัง: คุณสามารถเปลี่ยน URL นี้ได้ตามต้องการ */
+            background-image: url('https://www.unileverfoodsolutions.co.th/dam/global-ufs/mcos/SEA/calcmenu/recipes/TH-recipes/soups/%E0%B9%81%E0%B8%81%E0%B8%87%E0%B8%AE%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%A5/%E0%B9%81%E0%B8%81%E0%B8%87%E0%B8%AE%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%A5_header.jpg');
+        ">
+        <!-- Kept dark overlay here to ensure text readability over the image -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-gray-900 bg-opacity-70 p-8 rounded-2xl shadow-2xl">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-amber-400">
+                ค้นพบรสชาติไทยแท้
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 font-light text-gray-200">
+                สำรวจสุดยอดเมนูประจำภาค ที่สะท้อนวัฒนธรรมและรสชาติอันเป็นเอกลักษณ์
+            </p>
+            <a href="#north" class="inline-block bg-amber-500 text-gray-900 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-amber-400 transition duration-300 transform hover:scale-105">
+                เริ่มสำรวจอาหาร
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content: Regional Sections -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <!-- 1. ภาคเหนือ (North) -->
+        <section id="north" class="mb-20">
+            <h2 class="section-header text-4xl font-bold mb-8 text-amber-600">
+                🏔️ ภาคเหนือ:
+            </h2>
+            <!-- Text color changed from light to dark gray -->
+            <p class="mb-10 text-lg text-gray-700">
+                อาหารเหนือเน้นรสชาติกลมกล่อม ไม่เผ็ดจัด และการใช้เครื่องเทศท้องถิ่น เช่น ขมิ้น ข่า ตะไคร้ ทำให้มีกลิ่นหอมเป็นเอกลักษณ์
+            </p>
+            <div id="north-food-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Food cards will be injected here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- 2. ภาคกลาง (Central) -->
+        <section id="central" class="mb-20">
+            <h2 class="section-header text-4xl font-bold mb-8 text-amber-600">
+                🏰 ภาคกลาง:
+            </h2>
+            <!-- Text color changed from light to dark gray -->
+            <p class="mb-10 text-lg text-gray-700">
+                โดดเด่นด้วยความประณีต มีความสมดุลของรสชาติ เปรี้ยว หวาน เค็ม เผ็ด ผสมผสานกันอย่างลงตัว
+            </p>
+            <div id="central-food-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Food cards will be injected here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- 3. ภาคอีสาน (Northeast) -->
+        <section id="northeast" class="mb-20">
+            <h2 class="section-header text-4xl font-bold mb-8 text-amber-600">
+                🌾 ภาคอีสาน:
+            </h2>
+            <!-- Text color changed from light to dark gray -->
+            <p class="mb-10 text-lg text-gray-700">
+                เน้นรสชาติเผ็ด เปรี้ยว เค็มจัดจ้าน และการใช้น้ำปลาร้าที่ให้ความหอมเป็นเอกลักษณ์ มักรับประทานคู่กับข้าวเหนียว
+            </p>
+            <div id="northeast-food-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Food cards will be injected here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- 4. ภาคใต้ (South) -->
+        <section id="south" class="mb-20">
+            <h2 class="section-header text-4xl font-bold mb-8 text-amber-600">
+                🌊 ภาคใต้:
+            </h2>
+            <!-- Text color changed from light to dark gray -->
+            <p class="mb-10 text-lg text-gray-700">
+                โดดเด่นด้วยรสชาติจัดจ้าน เผ็ดร้อน และเข้มข้นจากการใช้ขมิ้นและเครื่องแกงที่มีพริกเยอะ อาหารทะเลสดใหม่
+            </p>
+            <div id="south-food-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Food cards will be injected here by JavaScript -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="header-bg text-gray-600 py-8 shadow-inner border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-2">&copy; 2025 จานเด็ด 4 ภาค | รวบรวมสูตรอาหารไทยยอดนิยม</p>
+            <p class="text-sm">จัดทำเพื่อเผยแพร่วัฒนธรรมอาหารไทย</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Recipe Details (Hidden by default) -->
+    <div id="recipe-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[100] hidden p-4" onclick="closeModal(event)">
+        <!-- Modal content wrapper updated to bg-white -->
+        <div id="modal-content-wrapper" class="bg-white rounded-xl shadow-2xl w-full max-w-3xl overflow-hidden" onclick="event.stopPropagation()">
+            <div class="modal-content overflow-y-auto">
+                <!-- Modal content will be dynamically loaded here -->
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 id="modal-title" class="text-3xl font-bold text-amber-600"></h3>
+                        <!-- Close button changed to dark text -->
+                        <button onclick="closeModal()" class="text-gray-500 hover:text-gray-800 transition duration-150">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        </button>
+                    </div>
+
+                    <div id="modal-body">
+                        <!-- Image and description -->
+                        <div class="mb-6">
+                            <!-- Note: The image URL in foodData is used here -->
+                            <img id="modal-image" src="" alt="รูปอาหาร" class="w-full h-64 object-cover rounded-lg mb-4 shadow-md">
+                            <!-- Text color changed from light to dark gray -->
+                            <p id="modal-description" class="text-gray-600 text-lg italic"></p>
+                        </div>
+
+                        <!-- Ingredients -->
+                        <div class="mb-8">
+                            <h4 class="text-2xl font-semibold mb-3 text-amber-600 border-b border-gray-300 pb-1">ส่วนประกอบ/วัตถุดิบ</h4>
+                            <!-- Text color changed from light to dark gray -->
+                            <ul id="modal-ingredients" class="list-disc list-inside space-y-1 text-gray-700">
+                                <!-- Ingredients list -->
+                            </ul>
+                        </div>
+
+                        <!-- Instructions -->
+                        <div>
+                            <h4 class="text-2xl font-semibold mb-3 text-amber-600 border-b border-gray-300 pb-1">ขั้นตอนการทำ</h4>
+                            <!-- Text color changed from light to dark gray -->
+                            <ol id="modal-instructions" class="list-decimal list-inside space-y-3 text-gray-700">
+                                <!-- Instructions list -->
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Data Structure for all food items
+        const foodData = [
+            // ภาคเหนือ (North)
+            {
+                id: 'khao-soi',
+                name: 'ข้าวซอย',
+                region: 'ภาคเหนือ',
+                gridId: 'north-food-grid',
+                description: 'บะหมี่ในน้ำแกงกะทิรสเข้มข้น มีกลิ่นหอมของเครื่องเทศ โรยหน้าด้วยหมี่กรอบ เป็นเมนูยอดนิยมของเชียงใหม่',
+                image: 'https://s359.kapook.com/pagebuilder/0ed67230-0b3c-40fb-8a3b-77709f7266f2.jpg',
+                ingredients: ['บะหมี่เหลือง', 'น่องไก่/เนื้อ', 'เครื่องแกงข้าวซอย', 'กะทิ', 'พริกเผา', 'หอมแดง', 'ผักกาดดอง', 'มะนาว'],
+                instructions: ['ผัดเครื่องแกงกับหัวกะทิจนหอม', 'ใส่ไก่ลงไปผัดจนสุกเล็กน้อย', 'เติมกะทิและน้ำเปล่า เคี่ยวจนไก่นุ่ม', 'ปรุงรสด้วยน้ำปลาและน้ำตาล', 'ลวกบะหมี่ จัดใส่ชาม ราดด้วยน้ำแกงและโรยหมี่กรอบ เสิร์ฟพร้อมเครื่องเคียง'],
+            },
+            {
+                id: 'gaeng-hung-lay',
+                name: 'แกงฮังเล',
+                region: 'ภาคเหนือ',
+                gridId: 'north-food-grid',
+                description: 'แกงที่มีรสเค็มเปรี้ยวหวาน เนื้อหมูนุ่มละลายในปาก ใส่ขิงซอยและกระเทียมดองเป็นเอกลักษณ์',
+                image: 'https://www.unileverfoodsolutions.co.th/dam/global-ufs/mcos/SEA/calcmenu/recipes/TH-recipes/soups/%E0%B9%81%E0%B8%81%E0%B8%87%E0%B8%AE%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%A5/%E0%B9%81%E0%B8%81%E0%B8%87%E0%B8%AE%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%A5_header.jpg',
+                ingredients: ['หมูสามชั้น', 'เครื่องแกงฮังเล', 'ขิงซอย', 'กระเทียมดอง', 'ถั่วลิสง', 'น้ำตาลปี๊บ', 'น้ำมะขามเปียก'],
+                instructions: ['นำหมูไปหมักกับเครื่องแกงและผงฮังเล', 'ผัดหมูที่หมักกับน้ำมันจนเข้ากัน', 'เติมน้ำเปล่าและน้ำมะขามเปียก', 'เคี่ยวด้วยไฟอ่อน 1-2 ชั่วโมงจนหมูนุ่มและน้ำแกงข้น', 'ใส่ขิงซอย กระเทียมดอง และปรุงรสตามชอบ'],
+            },
+            {
+                id: 'sai-oua',
+                name: 'ไส้อั่ว',
+                region: 'ภาคเหนือ',
+                gridId: 'north-food-grid',
+                description: 'ไส้กรอกหมูย่างที่อัดแน่นไปด้วยเครื่องแกงสมุนไพร เช่น ตะไคร้ ใบมะกรูด ข่า มีกลิ่นหอมชวนรับประทาน',
+                image: 'https://suteahan.com/wp-content/uploads/2022/05/image-10.png',
+                ingredients: ['เนื้อหมูบด', 'ไส้หมู', 'เครื่องแกงเผ็ด', 'ตะไคร้ซอย', 'ใบมะกรูดซอย', 'ข่าสับ', 'น้ำปลา'],
+                instructions: ['นำเนื้อหมูบดมาคลุกเคล้ากับเครื่องแกงและสมุนไพรทั้งหมด', 'ปรุงรสด้วยน้ำปลาและน้ำตาล', 'นำส่วนผสมยัดใส่ไส้หมูที่เตรียมไว้ โดยไม่ให้อัดแน่นจนเกินไป', 'นำไปย่างบนเตาถ่านไฟอ่อนจนสุกและมีสีเหลืองทอง'],
+            },
+
+            // ภาคกลาง (Central)
+            {
+                id: 'pad-thai',
+                name: 'ผัดไทยกุ้งสด',
+                region: 'ภาคกลาง',
+                gridId: 'central-food-grid',
+                description: 'เมนูเส้นยอดนิยมที่ผัดกับซอสรสชาติเปรี้ยว หวาน เค็ม และเผ็ดเล็กน้อย ใส่กุ้งสด เต้าหู้ ถั่วงอก และใบกุยช่าย',
+                image: 'https://s359.kapook.com/pagebuilder/bfd70b7d-7fe7-4ffd-b252-f1cbd6a1c37d.jpg',
+                ingredients: ['เส้นเล็ก', 'กุ้งสด', 'เต้าหู้เหลือง', 'หัวไชโป๊วสับ', 'ถั่วงอก', 'ใบกุยช่าย', 'น้ำมะขามเปียก', 'น้ำปลา', 'น้ำตาลปี๊บ', 'พริกป่น', 'ถั่วลิสงคั่วบด'],
+                instructions: ['ผัดหัวไชโป๊วและเต้าหู้กับน้ำมันจนหอม', 'ใส่กุ้งสด ผัดจนเกือบสุก แล้วพักไว้', 'ใส่เส้นเล็ก ผัดกับซอสผัดไทย (น้ำมะขามเปียก น้ำปลา น้ำตาลปี๊บ) จนเส้นนุ่ม', 'ใส่กุ้งที่พักไว้ ถั่วงอก และใบกุยช่าย ผัดให้เข้ากันอย่างรวดเร็ว', 'ตักใส่จาน โรยด้วยถั่วลิสงคั่วและพริกป่น เสิร์ฟพร้อมมะนาว'],
+            },
+            {
+                id: 'tom-yum-goong',
+                name: 'ต้มยำกุ้งน้ำข้น',
+                region: 'ภาคกลาง',
+                gridId: 'central-food-grid',
+                description: 'ซุปที่มีรสชาติจัดจ้าน เปรี้ยว เผ็ด เค็ม และหอมสมุนไพรไทย เช่น ข่า ตะไคร้ ใบมะกรูด ใส่มันกุ้งและนมเพิ่มความข้น',
+                image: 'https://assets.unileversolutions.com/recipes-v2/117756.jpg',
+                ingredients: ['กุ้งแม่น้ำ', 'ข่า', 'ตะไคร้', 'ใบมะกรูด', 'เห็ด', 'พริกขี้หนูบุบ', 'น้ำปลา', 'น้ำมะนาว', 'น้ำพริกเผา', 'นมสด/กะทิ'],
+                instructions: ['ต้มน้ำให้เดือด ใส่ข่า ตะไคร้ ใบมะกรูด และเห็ด', 'เมื่อน้ำเดือดอีกครั้ง ใส่กุ้งลงไปต้มจนสุก', 'ปรุงรสด้วยน้ำปลา น้ำมะนาว น้ำพริกเผา และพริกขี้หนูบุบ', 'ใส่หางกะทิหรือนมสดเพื่อทำเป็นน้ำข้น', 'คนให้เข้ากัน ตักเสิร์ฟ โรยด้วยผักชี'],
+            },
+            {
+                id: 'green-curry',
+                name: 'แกงเขียวหวานไก่',
+                region: 'ภาคกลาง',
+                gridId: 'central-food-grid',
+                description: 'แกงกะทิสีเขียวอ่อนจากพริกแกงที่มีความหอมหวานของกะทิ รสชาติกลมกล่อมเผ็ดร้อน กินคู่กับข้าวสวยหรือขนมจีน',
+                image: 'https://cookinghub.in.th/wp-content/uploads/2024/12/%E0%B9%81%E0%B8%81%E0%B8%87%E0%B9%80%E0%B8%82%E0%B8%B5%E0%B8%A2%E0%B8%A7%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99%E0%B9%84%E0%B8%81%E0%B9%88%E0%B9%83%E0%B8%AA%E0%B9%88%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%87.jpg',
+                ingredients: ['เนื้อไก่', 'เครื่องแกงเขียวหวาน', 'กะทิ', 'มะเขือเปราะ', 'มะเขือพวง', 'ใบโหระพา', 'พริกชี้ฟ้า', 'น้ำปลา', 'น้ำตาลปี๊บ'],
+                instructions: ['ผัดหัวกะทิกับเครื่องแกงเขียวหวานจนแตกมัน', 'ใส่เนื้อไก่ลงไปผัดจนสุก', 'เติมหางกะทิ เคี่ยวจนไก่นุ่ม', 'ใส่มะเขือเปราะและมะเขือพวง ต้มจนสุก', 'ปรุงรสด้วยน้ำปลาและน้ำตาลปี๊บ ใส่ใบโหระพาและพริกชี้ฟ้า ปิดไฟ'],
+            },
+
+            // ภาคอีสาน (Northeast)
+            {
+                id: 'som-tum',
+                name: 'ส้มตำไทย',
+                region: 'ภาคอีสาน',
+                gridId: 'northeast-food-grid',
+                description: 'สลัดมะละกอดิบตำกับพริก กระเทียม ถั่วลิสง และปรุงรสเปรี้ยว หวาน เค็ม เป็นเมนูสุดแซ่บของอีสาน',
+                image: 'https://www.unileverfoodsolutions.co.th/dam/global-ufs/mcos/SEA/calcmenu/recipes/TH-recipes/salads/%E0%B8%AA%E0%B9%89%E0%B8%A1%E0%B8%95%E0%B8%B3%E0%B9%84%E0%B8%97%E0%B8%A2/%E0%B8%AA%E0%B9%89%E0%B8%A1%E0%B8%95%E0%B8%B3%E0%B9%84%E0%B8%97%E0%B8%A2_header.jpg',
+                ingredients: ['มะละกอดิบสับ', 'มะเขือเทศ', 'ถั่วฝักยาว', 'ถั่วลิสง', 'กุ้งแห้ง', 'พริกขี้หนู', 'กระเทียม', 'น้ำปลา', 'น้ำมะนาว', 'น้ำตาลปี๊บ'],
+                instructions: ['โขลกกระเทียมและพริกขี้หนูพอแหลก', 'ใส่ถั่วฝักยาวและมะเขือเทศ ตำเบาๆ', 'ปรุงรสด้วยน้ำปลา น้ำมะนาว และน้ำตาลปี๊บ', 'ใส่เส้นมะละกอและแครอทสับ ตำเคล้าให้เข้ากันอย่างรวดเร็ว', 'ใส่ถั่วลิสงและกุ้งแห้ง ตักใส่จาน'],
+            },
+            {
+                id: 'larb-moo',
+                name: 'ลาบหมู',
+                region: 'ภาคอีสาน',
+                gridId: 'northeast-food-grid',
+                description: 'เนื้อหมูสับปรุงรสด้วยน้ำปลา น้ำมะนาว และพริกป่น คลุกเคล้ากับข้าวคั่วและใบสะระแหน่ มีรสชาติจัดจ้าน หอมกลิ่นข้าวคั่ว',
+                image: 'https://static.thairath.co.th/media/dFQROr7oWzulq5Fa6rpMOnZ7qvx5h2vIBvenPj81tAZcIkzjz19kfGNlOmCbZrvSXTf.jpg',
+                ingredients: ['เนื้อหมูสับ', 'หอมแดงซอย', 'ต้นหอมซอย', 'ใบสะระแหน่', 'ข้าวคั่ว', 'พริกป่น', 'น้ำปลา', 'น้ำมะนาว'],
+                instructions: ['รวนหมูสับกับน้ำเปล่าเล็กน้อยจนสุก', 'นำหมูสุกมาพักไว้ให้เย็น', 'นำหมูมาคลุกเคล้ากับหอมแดง ต้นหอม และใบสะระแหน่', 'ปรุงรสด้วยน้ำปลา น้ำมะนาว และพริกป่น', 'ใส่ข้าวคั่ว คลุกเคล้าให้เข้ากัน ตักเสิร์ฟ'],
+            },
+            {
+                id: 'nam-tok-neua',
+                name: 'น้ำตกเนื้อ',
+                region: 'ภาคอีสาน',
+                gridId: 'northeast-food-grid',
+                description: 'เนื้อย่างหั่นเป็นชิ้นพอดีคำ คลุกเคล้ากับเครื่องปรุงรสลาบ มีรสชาติเผ็ด เปรี้ยว หอมกลิ่นเนื้อและข้าวคั่ว',
+                image: 'https://rattsose.wordpress.com/wp-content/uploads/2016/04/1-1.jpg?w=1000',
+                ingredients: ['เนื้อสันในย่าง', 'หอมแดงซอย', 'ต้นหอมซอย', 'ข้าวคั่ว', 'พริกป่น', 'น้ำปลา', 'น้ำมะนาว', 'ใบสะระแหน่'],
+                instructions: ['ย่างเนื้อจนสุกตามชอบ แล้วหั่นเป็นชิ้นพอดีคำ', 'นำเนื้อย่างมาคลุกเคล้ากับหอมแดง ต้นหอม และใบสะระแหน่', 'ปรุงรสด้วยน้ำปลา น้ำมะนาว และพริกป่น', 'ใส่ข้าวคั่ว คลุกเคล้าให้เข้ากัน ตักเสิร์ฟ'],
+            },
+
+            // ภาคใต้ (South)
+            {
+                id: 'gaeng-som',
+                name: 'แกงส้ม',
+                region: 'ภาคใต้',
+                gridId: 'south-food-grid',
+                description: 'แกงรสจัดจ้าน เปรี้ยวเผ็ดร้อน ไม่มีกะทิ เน้นการใช้ขมิ้นและพริกแกงที่เข้มข้น มักใส่เนื้อปลาและหน่อไม้ดอง',
+                image: 'https://api2.krua.co/wp-content/uploads/2025/07/RT1920_Gallery_-08.jpg',
+                ingredients: ['เนื้อปลา', 'หน่อไม้ดอง', 'เครื่องแกงส้ม/แกงเหลือง', 'น้ำมะขามเปียก', 'น้ำตาลปี๊บ', 'น้ำปลา', 'ส้มแขก (ถ้ามี)'],
+                instructions: ['ต้มน้ำให้เดือด ละลายเครื่องแกงส้มกับเนื้อปลาลงไป', 'เมื่อน้ำแกงเดือด ใส่หน่อไม้ดอง', 'ปรุงรสด้วยน้ำมะขามเปียก น้ำตาลปี๊บ และน้ำปลา', 'เคี่ยวจนเนื้อปลาสุกและน้ำแกงเข้าเนื้อดี', 'ตักเสิร์ฟขณะร้อนๆ'],
+            },
+            {
+                id: 'khua-kling',
+                name: 'คั่วกลิ้ง',
+                region: 'ภาคใต้',
+                gridId: 'south-food-grid',
+                description: 'เนื้อสัตว์สับ (มักเป็นหมูหรือเนื้อ) ผัดกับพริกแกงใต้รสเผ็ดร้อนเข้มข้นจนแห้งและมีกลิ่นหอมของสมุนไพร',
+                image: 'https://www.unileverfoodsolutions.co.th/dam/global-ufs/mcos/SEA/calcmenu/recipes/TH-recipes/red-meats-&-red-meat-dishes/%E0%B8%84%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%81%E0%B8%A5%E0%B8%B4%E0%B9%89%E0%B8%87%E0%B8%AB%E0%B8%A1%E0%B8%B9/%E0%B8%84%E0%B8%B1%E0%B9%88%E0%B8%A7%E0%B8%81%E0%B8%A5%E0%B8%B4%E0%B9%89%E0%B8%87%E0%B8%AB%E0%B8%A1%E0%B8%B9_header.jpg',
+                ingredients: ['เนื้อหมูสับ', 'เครื่องแกงคั่วกลิ้ง', 'ใบมะกรูดซอย', 'พริกชี้ฟ้าซอย', 'น้ำมันพืช', 'น้ำปลา', 'น้ำตาล'],
+                instructions: ['ผัดเครื่องแกงคั่วกลิ้งกับน้ำมันจนหอม', 'ใส่เนื้อหมูสับลงไปผัดให้เข้ากัน', 'ผัดไปเรื่อยๆ จนเนื้อแห้งและเครื่องแกงซึมเข้าเนื้อ (คั่วจนกลิ้งในกระทะ)', 'ปรุงรสด้วยน้ำปลาและน้ำตาลเล็กน้อย', 'ใส่ใบมะกรูดและพริกชี้ฟ้าซอย คลุกเคล้าให้เข้ากันแล้วตักเสิร์ฟ'],
+            },
+            {
+                id: 'moo-hong',
+                name: 'หมูฮ้อง',
+                region: 'ภาคใต้',
+                gridId: 'south-food-grid',
+                description: 'หมูสามชั้นตุ๋นกับน้ำซีอิ๊วและเครื่องเทศจนเปื่อยนุ่ม มีรสเค็มหวาน หอมกลิ่นเครื่องพะโล้ เป็นอาหารพื้นเมืองภูเก็ต',
+                image: 'https://cdn-cms.cpbrandsite.com/web/recipe/1906489f710d28abfefda701e_20240703_224616.jpg',
+                ingredients: ['หมูสามชั้น', 'ซีอิ๊วดำหวาน', 'ซีอิ๊วขาว', 'น้ำตาลปี๊บ', 'กระเทียม', 'รากผักชี', 'พริกไทยดำ'],
+                instructions: ['โขลกกระเทียม รากผักชี และพริกไทยดำให้ละเอียด', 'นำหมูสามชั้นไปผัดกับเครื่องที่โขลกจนมีกลิ่นหอม', 'เติมซีอิ๊วดำ ซีอิ๊วขาว และน้ำตาลปี๊บลงไปผัด', 'เติมน้ำเปล่าหรือน้ำซุป เคี่ยวด้วยไฟอ่อน 1-2 ชั่วโมงจนหมูเปื่อยนุ่มและน้ำซุปข้นหนืด'],
+            }
+        ];
+
+        // --- Utility Functions ---
+
+        // Function to create an HTML card for a food item
+        function createFoodCard(food) {
+            // Updated card styles for light theme
+            return `
+                <div class="food-card rounded-xl overflow-hidden shadow-md hover:shadow-lg cursor-pointer bg-white text-gray-800">
+                    <img src="${food.image}" alt="รูป ${food.name}" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold text-amber-600 mb-2">${food.name}</h3>
+                        <p class="text-gray-600 text-sm h-10 overflow-hidden">${food.description.substring(0, 70)}...</p>
+                        <button onclick="openModal('${food.id}')" class="mt-4 w-full bg-amber-500 text-white font-bold py-2 rounded-lg hover:bg-amber-600 transition duration-300 transform hover:scale-[1.02] shadow-md">
+                            ดูวิธีทำ
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Function to render all food cards into their respective grids
+        function renderFoodCards() {
+            foodData.forEach(food => {
+                const grid = document.getElementById(food.gridId);
+                if (grid) {
+                    grid.innerHTML += createFoodCard(food);
+                }
+            });
+        }
+
+        // Function to find food data by ID
+        function getFoodById(id) {
+            return foodData.find(food => food.id === id);
+        }
+
+        // Function to open the recipe modal
+        window.openModal = function(id) {
+            const food = getFoodById(id);
+            if (!food) return;
+
+            // 1. Update Modal Content
+            document.getElementById('modal-title').textContent = food.name;
+            document.getElementById('modal-image').src = food.image;
+            document.getElementById('modal-image').alt = `รูป ${food.name}`;
+            document.getElementById('modal-description').textContent = food.description;
+
+            // 2. Render Ingredients List
+            const ingredientsList = document.getElementById('modal-ingredients');
+            ingredientsList.innerHTML = food.ingredients.map(item => `<li>${item}</li>`).join('');
+
+            // 3. Render Instructions List
+            const instructionsList = document.getElementById('modal-instructions');
+            instructionsList.innerHTML = food.instructions.map(step => `<li>${step}</li>`).join('');
+
+            // 4. Display Modal
+            const modal = document.getElementById('recipe-modal');
+            modal.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden'); // Prevent background scrolling
+        }
+
+        // Function to close the recipe modal
+        window.closeModal = function(event) {
+            // Check if the click was directly on the backdrop (the modal element itself)
+            if (event && event.target.id !== 'recipe-modal') {
+                return;
+            }
+
+            const modal = document.getElementById('recipe-modal');
+            modal.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // --- Initialization ---
+        document.addEventListener('DOMContentLoaded', () => {
+            renderFoodCards();
+            // Attach event listeners to dynamically created buttons
+            document.getElementById('north-food-grid').addEventListener('click', (e) => {
+                if (e.target.tagName === 'BUTTON') {
+                    openModal(e.target.parentElement.querySelector('h3').textContent.includes('ข้าวซอย') ? 'khao-soi' : 
+                               e.target.parentElement.querySelector('h3').textContent.includes('แกงฮังเล') ? 'gaeng-hung-lay' : 
+                               'sai-oua');
+                }
+            });
+            document.getElementById('central-food-grid').addEventListener('click', (e) => {
+                if (e.target.tagName === 'BUTTON') {
+                    openModal(e.target.parentElement.querySelector('h3').textContent.includes('ผัดไทย') ? 'pad-thai' : 
+                               e.target.parentElement.querySelector('h3').textContent.includes('ต้มยำ') ? 'tom-yum-goong' : 
+                               'green-curry');
+                }
+            });
+            document.getElementById('northeast-food-grid').addEventListener('click', (e) => {
+                if (e.target.tagName === 'BUTTON') {
+                    openModal(e.target.parentElement.querySelector('h3').textContent.includes('ส้มตำ') ? 'som-tum' : 
+                               e.target.parentElement.querySelector('h3').textContent.includes('ลาบหมู') ? 'larb-moo' : 
+                               'nam-tok-neua');
+                }
+            });
+            document.getElementById('south-food-grid').addEventListener('click', (e) => {
+                if (e.target.tagName === 'BUTTON') {
+                    openModal(e.target.parentElement.querySelector('h3').textContent.includes('แกงส้ม') ? 'gaeng-som' : 
+                               e.target.parentElement.querySelector('h3').textContent.includes('คั่วกลิ้ง') ? 'khua-kling' : 
+                               'moo-hong');
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
+    
+  </body>
+  
+</html>
